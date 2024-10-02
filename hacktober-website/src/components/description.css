@@ -54,12 +54,23 @@
 }
 
 .text-container {
-    text-align: left;
-    width: 40vw; 
-    max-width: 600px; 
+    text-align: justify; /* This will distribute the text more evenly across the width */
+    width: 50vw; /* You can increase the width to use more of the screen */
+    max-width: 800px; /* Increase max width to expand the text area */
     margin-left: 2vw;
     flex-grow: 1;
 }
+
+.paragraph {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--Theme-Primary, #50DA4C);
+    text-align: justify; /* Apply text justification for better alignment */
+}
+
 
 .date {
     color: var(--Theme-Text, #FEFDF8);
@@ -67,15 +78,6 @@
     font-weight: 500;
     font-size: 4.5vw;
     text-transform: uppercase;
-}
-
-.paragraph {
-    font-size: 2rem; 
-    font-style: normal;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.5; 
-    color: var(--Theme-Primary, #50DA4C);
 }
 
 .paragraph a {
