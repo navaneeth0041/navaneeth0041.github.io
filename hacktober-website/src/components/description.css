@@ -10,8 +10,8 @@
     width: 100%;
     height: auto;
     box-sizing: border-box; 
-    justify-content: center;
     flex-wrap: wrap; 
+    box-sizing: border-box;
 }
 
 .greensquares {
@@ -58,6 +58,7 @@
     width: 40vw; 
     max-width: 600px; 
     margin-left: 2vw;
+    flex-grow: 1;
 }
 
 .date {
@@ -86,7 +87,6 @@
     text-decoration: underline;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 768px) {
     .description-container {
         flex-direction: column;
@@ -97,7 +97,7 @@
 
     .text-container {
         width: 90vw; 
-        text-align: center; /* Center text for mobile view */
+        text-align: center;
     }
 
     .date {

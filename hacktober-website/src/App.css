@@ -4,6 +4,7 @@ body{
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(180deg,#000000 60%,#0C5A30 100%);
   color: white;
+  overflow-x:hidden ;
 }
 
 .App{
