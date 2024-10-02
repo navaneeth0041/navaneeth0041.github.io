@@ -10,6 +10,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <Description/>
+      <Prizes/>
       <RegistrationForm/>
       <Footer />
     </div>
