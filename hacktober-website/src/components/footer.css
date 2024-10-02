@@ -1,0 +1,46 @@
+.footer {
+    background-color: var(--Theme-Background, #1C1C1C);
+    ;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .footer h3 {
+    color: var(--Theme-Text, #FEFDF8);
+    text-shadow: 0px 8px 4px rgba(255, 139, 255, 0.25);
+    font-family: "Space Grotesk";
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .footercontents p {
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 3.5vh;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .foot-icon{
+    display: block;
+  }
+  
+  .foot-icon img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .foot-icon a {
+    text-decoration: none;
+  }
+  
+  .foss-logo img {
+    width: 32vw;
+    margin-bottom: 20px;
+  }
+  
