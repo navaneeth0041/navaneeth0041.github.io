@@ -1,5 +1,5 @@
 import React from "react";
-import '/home/navne/HacktoberFest-Website/hacktober-website/src/components/Header/Header.css';
+import './Header.css';
 import Countdown from "../Countdown/CountdownTimer";
 
 
