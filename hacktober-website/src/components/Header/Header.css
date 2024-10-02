@@ -1,54 +1,54 @@
 .header {
     width: 100%;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
-
-
 }
 
-.header-top{
+
+.header-top {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 50px;
-    width: 100%;
+    flex-direction: row;
+    justify-content:space-between ; 
+    padding: 20px 0;
 }
 
-.logo{
-    max-width: 150px;
-    margin: 10px;
-    width: 100%;
+
+.logo {
+    max-width: 200px; 
     height: auto;
-    padding: 0 150px;
 }
-.header-main{
+
+
+.header-main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
 }
-.left-content{
+
+
+.left-content {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.mainLogo{
+.mainLogo {
     max-width: 400px;
-    margin: 10px;
-    width: 100%;
-    height: 100%;
-    padding: 50px 150px;
+    height: auto;
+    margin-bottom: 30px;
 }
-.subtext{
+
+.subtext {
     font-size: 22px;
     margin-bottom: 20px;
     color: #E0E0E0;
     font-weight: bold;
     text-shadow: 1px 1px 2px black;
-
 }
 
-.register-btn{
+
+.register-btn {
     background-color: #000000;
     color: #00FF00;
     border: 2px solid #00FF00;
@@ -57,38 +57,84 @@
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
-.register-btn:hover{
+.register-btn:hover {
     background-color: #00FF00;
     color: black;
 }
 
-.countdown{
-    font-size: 24px;
+.countdown {
+    font-size: 36px;
     color: #00FF00;
     font-weight: bold;
     margin-top: 15px;
     text-shadow: 1px 1px 2px black;
 }
 
-.timer-text{
-    font-size: 20px;
-    color: #E0E0E0;
-    margin-bottom: 10px;
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-@media (min-width:768px) {
-    .header-main{
+
+.timer-box {
+    background-color: #1D1D1D;
+    border-radius: 20px;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.timer-box h3 {
+    font-size: 48px;
+    color: #00FF00;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.timer-box p {
+    font-size: 18px;
+    color: #00FF00;
+    margin: 5px 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.timer-text {
+    font-size: 20px;
+    color: #E0E0E0;
+    margin-top: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .header-top {
+        justify-content: center; 
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    .header-main {
         flex-direction: row;
-        justify-content: space-between;
-        padding: 0 50px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 100px;
     }
-    .logo{
-        max-width: 120px;
-    }
-    .left-content,.right-content{
+
+    .left-content, .right-content {
         width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
+    .mainLogo {
+        max-width: 400px;
+    }
 }
