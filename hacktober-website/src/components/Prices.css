@@ -1,0 +1,47 @@
+.prizes-container {
+    padding: 40px;
+    background-color: #1b1b1b;
+    color: white;
+    text-align: center;
+  }
+  
+  .prizes-title {
+    font-size: 3vw;
+    color: #ff00ff;
+    margin-bottom: 20px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+  }
+  
+  .prize-card {
+    border: 2px solid #00ff00;
+    background-color: #000;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .prize-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .prize-content {
+    font-size: 1.5vw;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    color: #fff;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #00ff00;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ff00ff;
+  }
+  
