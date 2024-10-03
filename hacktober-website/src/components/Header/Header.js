@@ -5,6 +5,16 @@ import Countdown from "../Countdown/CountdownTimer";
 
 function Header() {
     const eventDate = "2024-10-21";
+
+    const scrollToRegistration = () => {
+        const registrationSection = document.getElementById("registration");
+        if (registrationSection) {
+            registrationSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+
+
     return (
         <div className="header">
             <div className="header-top">
@@ -15,7 +25,7 @@ function Header() {
                 <div className="left-content">
                     <img src='/assets/hacktoberfest.png' alt="hacktoberfest logo" className="mainLogo" />
                     <p className="subtext"> It's that time of year again.<br />HacktoberFest is nearly upon us!</p>
-                    <button className="register-btn">Register Now</button>
+                    <button className="register-btn" onClick={scrollToRegistration}>Register Now</button>
                 </div>
                 <div className="right-content">
                     <Countdown eventDate={eventDate} />

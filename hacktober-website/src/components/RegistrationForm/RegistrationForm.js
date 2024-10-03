@@ -163,7 +163,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <div id="registration" className="form-container">
       <ToastContainer />
       <h2 className="form-title">Register Now!</h2>
       <p className="form-description">
@@ -200,7 +200,7 @@ const RegistrationForm = () => {
           required
         />
         <button type="submit" className="submit-button" disabled={isSubmitting}>
-          {isSubmitting ? 'Submitting...' : 'Register Now'}
+          {isSubmitting ? 'Submitting...' : 'Register'}
         </button>
       </form>
     </div>
