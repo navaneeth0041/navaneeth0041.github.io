@@ -91,7 +91,7 @@
 /* For small screens (mobiles) */
 @media (max-width: 768px) {
   .countdown-timer {
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
   }
 

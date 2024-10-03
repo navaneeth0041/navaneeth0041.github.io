@@ -1,8 +1,12 @@
 .footer {
+  width: 100%;
+  height: 100%;
   padding: 20px;
   text-align: center;
   color: white;
+  /* background: linear-gradient(to top, #052212, #000000, #052212); */
 }
+
   
 .footer h3 {
   color: var(--Theme-Text, #FEFDF8);
@@ -24,14 +28,18 @@
   }
 
 .foot-icon{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
   
-.foot-icon img {
-  width: 30px;
-  margin: 0 10px;
-  cursor: pointer;
-}
+  .foot-icon img {
+    width: 3vw; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
   
 .foot-icon a {
   text-decoration: none;
