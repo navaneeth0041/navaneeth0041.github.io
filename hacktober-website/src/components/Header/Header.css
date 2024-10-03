@@ -1,22 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 .header {
     width: 100%;
     color: white;
     padding: 20px 0;
     text-align: center;
-    background-color: #000; 
+    background-color: #000;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+
 }
 
 .header-top {
     display: flex;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    gap: 20px; 
+    gap: 20px;
     padding: 10px 0;
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -24,10 +29,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     margin-top: 20px;
     padding: 0 20px;
+
 }
+
 
 .left-content {
     text-align: center;
@@ -35,85 +42,135 @@
 }
 
 .mainLogo {
-    max-width: 300px; 
+    max-width: 300px;
     width: 100%;
     height: auto;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .subtext {
-    font-size: 20px; 
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
     margin-bottom: 15px;
     color: #E0E0E0;
-    font-weight: bold;
+    font-weight: bolder;
     text-shadow: 1px 1px 2px black;
 }
 
 .register-btn {
     background-color: #000000;
-    color: #00FF00;
-    border: 2px solid #00FF00;
-    border-radius: 30px;
-    padding: 10px 30px; 
-    font-size: 16px; 
+    /* color: #00FF00; */
+    color: var(--primary-color);
+    /* border: 2px solid #00FF00; */
+    border: 2px solid var(--primary-color);
+    border-radius: 54px;
+    padding: 10px 30px;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 10px;
+    box-shadow: 0px 8px 4px 0px #30C54C40;
+
 }
 
 .register-btn:hover {
-    background-color: #00FF00;
+    /* background-color: #00FF00; */
+    background-color: var(--primary-color);
     color: black;
 }
 
-.countdown {
-    font-size: 32px; 
-    color: #00FF00;
-    font-weight: bold;
-    margin-top: 15px;
-    text-shadow: 1px 1px 2px black;
+
+
+
+
+
+/* For small devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .header-top {
+        justify-content: space-evenly;
+        padding: 20px 0px;
+    }
+
+    .header-main {
+        padding: 0 20px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .mainLogo {
+        max-width: 250px;
+    }
+
+    .subtext {
+        font-size: 18px;
+    }
+
+    .register-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
 }
 
-.timer-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap; 
-}
+@media (min-width: 600px) {
+    .header-top {
+        justify-content: space-evenly;
+        padding: 10px 0px;
+    }
 
-.timer-box {
-    background-color: #1D1D1D;
-    border-radius: 15px;
-    padding: 10px 15px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    min-width: 80px; 
-}
+    .header-main {
+        padding: 0px 0px;
 
-.timer-box h3 {
-    font-size: 36px;
-    color: #00FF00;
-    margin: 0;
-    font-family: 'Roboto Mono', monospace;
-}
+    }
 
-.timer-box p {
-    font-size: 16px; 
-    color: #00FF00;
-    margin: 5px 0 0;
-    font-family: 'Roboto', sans-serif;
-}
+    .logo {
+        max-width: 160px;
+    }
 
-.timer-text {
-    font-size: 18px; 
-    color: #E0E0E0;
-    margin-top: 10px;
+    .mainLogo {
+        max-width: 250px;
+    }
+
+    .subtext {
+        font-size: 18px;
+    }
+
+    .register-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+
 }
 
 @media (min-width: 768px) {
     .header-top {
+        justify-content: space-evenly;
+        padding: 10px 0px;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    .header-main {
+        padding: 0 10px;
+
+    }
+
+    .mainLogo {
+        max-width: 400px;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .header-top {
         justify-content: space-between;
-        padding: 20px 100px; 
+        padding: 10px 0;
     }
 
     .logo {
@@ -122,28 +179,60 @@
 
     .header-main {
         flex-direction: row;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        padding: 0 100px;
-    }
-
-    .left-content, .right-content {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 0 40px;
     }
 
     .mainLogo {
         max-width: 400px;
     }
 
-    .countdown {
-        font-size: 36px;
+}
+
+@media (min-width: 1200px) {
+    .header-top {
+        justify-content: space-between;
+        padding: 10px 100px;
     }
 
-    .timer-box {
-        min-width: 100px; 
+    .logo {
+        max-width: 180px;
+    }
+
+    .header-main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 80px;
+    }
+
+
+    .mainLogo {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header-top {
+        padding: 10px 100px;
+    }
+
+    .header-main {
+        padding: 20px 80px;
+
+    }
+
+    .mainLogo {
+        max-width: 500px;
+    }
+
+    .subtext {
+        font-size: 26px;
+    }
+
+    .register-btn {
+        font-size: 20px;
+        padding: 14px 50px;
     }
 }
