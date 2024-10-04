@@ -31,7 +31,7 @@ const CountdownTimer = () => {
   }, [timeLeft]);
 
   return (
-    <div className="countdown-container">
+    <div className="countdown-container ">
       <div className="countdown-timer">
         <div className="time-section">
           <span className="time-value">{timeLeft.days || "00"}</span>
