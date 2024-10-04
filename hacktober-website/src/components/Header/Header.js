@@ -16,7 +16,7 @@ function Header() {
 
 
     return (
-        <div className="header section ">
+        <div className="header">
             <div className="header-top" >
                 <img src='/assets/amfoss_logo.png' alt="amfoss logo" className="logo" />
                 <img src='/assets/amrita_logo.png' alt="amrita logo" className="logo" />
