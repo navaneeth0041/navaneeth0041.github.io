@@ -10,7 +10,7 @@
   --shadow-color: rgba(79, 183, 9, 0.1);
 }
 
-body {
+/* body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: "Space Grotesk", sans-serif;
@@ -18,15 +18,14 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; 
-  align-items: center;    
-  min-height: 100vh;      
+
+  min-height: 100vh;
   box-sizing: border-box;
-}
+} */
 
 .form-container {
-  width: 90%;
-  max-width: 500px; 
+  width: 100%;
+  max-width: 500px;
   padding: 40px 30px;
   background-color: var(--form-bg-color);
   border-radius: 20px;
@@ -87,7 +86,7 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   font-family: inherit;
-  align-self: center; 
+  align-self: center;
   width: 100%;
   max-width: 200px;
   margin-top: 25px;
@@ -106,9 +105,41 @@ body {
   text-align: left;
 }
 
+@media (max-width: 600px) {
+  .form-container {
+    padding: 60px 100px;
+
+  }
+
+  .form-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .form-description {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  .form-input {
+    font-size: 1.12rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 14px 40px;
+  }
+
+  .note {
+    font-size: .75rem;
+    text-align: left;
+  }
+}
+
 @media (min-width: 600px) {
   .form-container {
-    padding: 60px 50px;
+    padding: 60px 80px;
+
   }
 
   .form-title {
@@ -135,6 +166,7 @@ body {
 
 @media (min-width: 1024px) {
   .form-container {
+    margin-top: 50px;
     max-width: 40vw;
     padding: 80px;
   }
