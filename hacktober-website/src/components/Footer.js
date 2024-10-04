@@ -3,11 +3,11 @@ import './footer.css';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer section">
       <div className="footercontents">
-          <h3>Support Open Source With</h3>
+        <h3>Support Open Source With</h3>
         <div className="foss-logo">
-      <img src="/assets/amfoss_logo.png" alt="fosslogo" /> 
+          <img src="/assets/amfoss_logo.png" alt="fosslogo" />
         </div>
         <p>We'll see you there!</p>
         <div className="foot-icon">

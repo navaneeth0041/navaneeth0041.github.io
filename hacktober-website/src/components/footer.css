@@ -4,7 +4,17 @@
   padding: 20px;
   text-align: center;
   color: white;
-  /* background: linear-gradient(to top, #052212, #000000, #052212); */
+  width: 100%;
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=1c1c1c&c2=193319&gt=l&gd=dtt
+*/
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=1c1c1c&c2=2c592c&gt=l&gd=dtt
+*/
+  background: #1C1C1C;
+  background: linear-gradient(180deg, #1C1C1C, #2C592C);
 }
 
   
@@ -17,7 +27,7 @@
   font-weight: 700;
   line-height: normal;
 }
-  
+
 .footercontents p {
   color: #FFF;
   font-family: "Space Grotesk";
@@ -25,7 +35,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  }
+}
 
 .foot-icon{
   display: flex;
@@ -44,9 +54,8 @@
 .foot-icon a {
   text-decoration: none;
 }
-  
+
 .foss-logo img {
   width: 32vw;
   margin-bottom: 20px;
 }
-  

@@ -4,13 +4,18 @@
   --primary-color: #50DA4C;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
-  background: linear-gradient(180deg, #000000 60%, #0C5A30 100%);
+  background: #1C1C1C;
   color: white;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -18,7 +23,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  min-height: 100vh;
+  overflow-x: hidden;
   box-sizing: border-box;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
 }

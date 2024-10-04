@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './RegistrationForm.css'; 
+import './RegistrationForm.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,7 +15,7 @@ const RegistrationForm = () => {
   const sheetBestEndpoint = 'https://api.sheetbest.com/sheets/afbe7454-7092-4512-8fbc-e7767a248f55';
 
   const [submittedEmails, setSubmittedEmails] = useState([]);
-  const [submittedrollNums,setSubmittedrollNums] = useState([]);
+  const [submittedrollNums, setSubmittedrollNums] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -87,7 +87,7 @@ const RegistrationForm = () => {
 
       const existingData = await getResponse.json();
 
-      const registrationLimit = 175; 
+      const registrationLimit = 175;
       if (existingData.length >= registrationLimit) {
         toast.error('Registration limit reached. No more seats available.');
         setFormData({
@@ -149,7 +149,7 @@ const RegistrationForm = () => {
           email: '',
         });
         setSubmittedEmails([...submittedEmails, emailLower]);
-        setSubmittedrollNums([...submittedrollNums,rollLower]);
+        setSubmittedrollNums([...submittedrollNums, rollLower]);
       } else {
         const errorData = await postResponse.json();
         toast.error(`Error: ${errorData.error || 'Something went wrong.'}`);
@@ -163,11 +163,11 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div id="registration" className="form-container">
+    <div id="registration" className="form-container section">
       <ToastContainer />
       <h2 className="form-title">Register Now!</h2>
       <p className="form-description">
-        Sign up for free by filling out the form below, and hurry—seats are limited! 
+        Sign up for free by filling out the form below, and hurry—seats are limited!
         Don’t forget to bring your friends along too!
       </p>
       <p className="note">*Note: Only for Amritapuri campus students.</p>

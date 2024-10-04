@@ -11,10 +11,10 @@ function Description() {
         <div className="square"></div>
       </div>
       <div className="text-container">
-        <h1 className="date">21 OCTOBER</h1>
+        <h1 className="date">21 & 22 OCTOBER</h1>
         <p className="paragraph">
-          <strong>Hacktoberfest</strong> is an annual event hosted by 
-          <a href="https://www.digitalocean.com/" target="_blank" rel="noopener noreferrer"> DigitalOcean</a> and 
+          <strong>Hacktoberfest</strong> is an annual event hosted by
+          <a href="https://www.digitalocean.com/" target="_blank" rel="noopener noreferrer"> DigitalOcean</a> and
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer"> GitHub</a> promoting and supporting Open Source collaboration. It’s all about encouraging meaningful contributions to open source.
         </p>
         <p className="paragraph">
