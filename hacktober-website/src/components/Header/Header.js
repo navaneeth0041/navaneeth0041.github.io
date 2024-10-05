@@ -18,7 +18,7 @@ function Header() {
     return (
         <div className="header">
             <div className="header-top" >
-                <a href="https://amfoss.in"><img src='/assets/amfoss_logo.png' alt="amfoss logo" className="logo" /></a>
+                <a href="https://amfoss.in"><img src={`${process.env.PUBLIC_URL}/assets/amfoss_logo.png`} alt="amfoss logo" className="logo" /></a>
                 <a href="https://www.amrita.edu/campus/amritapuri/"><img src='/assets/amrita_logo.png' alt="amrita logo" className="logo" /></a>
             </div>
             <div className="header-main" >
