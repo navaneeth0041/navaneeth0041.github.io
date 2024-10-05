@@ -16,20 +16,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.17.0'  # Use the Node.js version you're using
+          node-version: '20.17.0'  
 
       - name: Install dependencies
         run: |
-          cd hacktober-fest
+          cd hacktober-website
           npm install
 
       - name: Build React app
         run: |
-          cd hacktober-fest
+          cd hacktober-website
           npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hacktober-fest/build
+          publish_dir: ./hacktober-website/build
