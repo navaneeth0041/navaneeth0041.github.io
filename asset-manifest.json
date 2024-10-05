@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/HacktoberFest-Website/static/css/main.1b73b5e3.css",
-    "main.js": "/HacktoberFest-Website/static/js/main.2ff2a739.js",
+    "main.js": "/HacktoberFest-Website/static/js/main.04f3aa4d.js",
     "static/js/453.678d12f7.chunk.js": "/HacktoberFest-Website/static/js/453.678d12f7.chunk.js",
     "index.html": "/HacktoberFest-Website/index.html",
     "main.1b73b5e3.css.map": "/HacktoberFest-Website/static/css/main.1b73b5e3.css.map",
-    "main.2ff2a739.js.map": "/HacktoberFest-Website/static/js/main.2ff2a739.js.map",
+    "main.04f3aa4d.js.map": "/HacktoberFest-Website/static/js/main.04f3aa4d.js.map",
     "453.678d12f7.chunk.js.map": "/HacktoberFest-Website/static/js/453.678d12f7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b73b5e3.css",
-    "static/js/main.2ff2a739.js"
+    "static/js/main.04f3aa4d.js"
   ]
 }
