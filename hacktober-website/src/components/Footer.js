@@ -11,9 +11,9 @@ function Footer() {
         </div>
         <p>We'll see you there!</p>
         <div className="foot-icon">
-          <a href="https://google.com"><img src="/assets/hacktober_logo.png" alt="hackicon" /></a>
+          <a href="https://hacktoberfest.com"><img src="/assets/hacktober_logo.png" alt="hackicon" /></a>
           <a href="https://github.com"><img src="/assets/github.png" alt="GitHub" /></a>
-          <a href="https://google.com"><img src="/assets/channels4_profile-removebg-preview 1.png" alt="icon3" /></a>
+          <a href="https://digitalocean.com"><img src="/assets/channels4_profile-removebg-preview 1.png" alt="icon3" /></a>
         </div></div>
     </footer>
   );
