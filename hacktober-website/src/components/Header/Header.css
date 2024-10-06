@@ -10,7 +10,7 @@
     position: relative;
     background: #1C1C1C;
     background: linear-gradient(0deg, #1C1C1C, #193319);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .header-top {
@@ -86,16 +86,17 @@
     color: black;
 }
 
-
-
-
-
-
 /* For small devices (max-width: 600px) */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+    .header {
+        min-height: 100vh;
+    }
+
     .header-top {
-        justify-content: space-evenly;
+
+
         padding: 20px 0px;
+
 
     }
 
@@ -104,7 +105,10 @@
     }
 
     .logo {
-        min-width: 100px;
+        max-width: 150px;
+
+        width: 200px;
+        min-width: 0;
     }
 
     .mainLogo {
@@ -112,16 +116,57 @@
     }
 
     .subtext {
-        font-size: 18px;
+        font-size: 20px;
+        margin-top: 20px;
     }
 
     .register-btn {
-        font-size: 14px;
+        font-size: 18px;
         padding: 8px 20px;
     }
 }
 
-@media (min-width: 600px) {
+/* @media (max-width:720px) {
+    .header {
+        min-height: 90vh;
+    }
+
+    .header-top {
+
+
+        padding: 20px 0px;
+
+
+    }
+
+    .header-main {
+        padding: 0 20px;
+    }
+
+    .logo {
+        max-width: 150px;
+
+        width: 200px;
+        min-width: 0;
+    }
+
+    .mainLogo {
+        max-width: 250px;
+    }
+
+    .subtext {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .register-btn {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+} */
+
+@media (max-width: 720px) {
     .header-top {
         justify-content: space-evenly;
         padding: 10px 0px;
@@ -152,7 +197,7 @@
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
     .header-top {
         justify-content: space-evenly;
         padding: 10px 0px;
