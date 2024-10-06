@@ -107,7 +107,9 @@
 
 @media (max-width: 600px) {
   .form-container {
+    width: 80%;
     padding: 60px 100px;
+    margin-top: 30px;
 
   }
 
@@ -139,6 +141,7 @@
 @media (min-width: 600px) {
   .form-container {
     padding: 60px 80px;
+    margin-top: 0px;
 
   }
 
