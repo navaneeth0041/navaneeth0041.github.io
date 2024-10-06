@@ -195,3 +195,28 @@
     font-size: 1rem;
   }
 }
+
+.limit-reached {
+  color: red;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.form-input:disabled {
+  background-color: #e0e0e0;  /* Lighter background for disabled input */
+  color: #a0a0a0;  /* Dimmed text color */
+  cursor: not-allowed;  /* Show not-allowed cursor */
+  border: 1px solid #d0d0d0; /* Change border color */
+}
+
+/* Style for disabled submit button */
+.submit-button:disabled {
+  background-color: #d3d3d3;  /* Light grey background */
+  color: #a0a0a0;  /* Dimmed text */
+  cursor: not-allowed;  /* Show not-allowed cursor */
+  border: 1px solid #b0b0b0; /* Change border color */
+}
+

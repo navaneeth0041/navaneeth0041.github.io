@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './RegistrationForm.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,11 +11,41 @@ const RegistrationForm = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [limitReached, setLimitReached] = useState(false);
+  const [registrationLimit, setRegistrationLimit] = useState(174); 
 
   const sheetBestEndpoint = 'https://api.sheetbest.com/sheets/afbe7454-7092-4512-8fbc-e7767a248f55';
 
   const [submittedEmails, setSubmittedEmails] = useState([]);
   const [submittedrollNums, setSubmittedrollNums] = useState([]);
+
+  useEffect(() => {
+    const checkLimit = async () => {
+      try {
+        const getResponse = await fetch(sheetBestEndpoint, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!getResponse.ok) {
+          throw new Error('Failed to fetch existing registrations.');
+        }
+
+        const existingData = await getResponse.json();
+        if (existingData.length >= registrationLimit) {
+          setLimitReached(true);
+          toast.error('Registration limit reached. No more seats available.', { toastId: 'limit-toast' });
+        }
+      } catch (error) {
+        console.error('Error fetching registration limit:', error);
+        toast.error('An error occurred while checking the registration limit.', { toastId: 'error-toast' });
+      }
+    };
+
+    checkLimit();
+  }, [registrationLimit]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +69,6 @@ const RegistrationForm = () => {
       return false;
     }
 
-
     return true;
   };
 
@@ -50,7 +79,6 @@ const RegistrationForm = () => {
 
     const emailLower = formData.email.toLowerCase();
     const rollLower = formData.rollNumber.toLowerCase();
-
 
     if (submittedEmails.includes(emailLower)) {
       toast.error('This email has already been submitted in this session.');
@@ -86,16 +114,15 @@ const RegistrationForm = () => {
       }
 
       const existingData = await getResponse.json();
-
-      const registrationLimit = 175;
       if (existingData.length >= registrationLimit) {
-        toast.error('Registration limit reached. No more seats available.');
+        toast.error('Registration limit reached. No more seats available.', { toastId: 'limit-toast' });
         setFormData({
           fullName: '',
           rollNumber: '',
           email: '',
         });
         setIsSubmitting(false);
+        setLimitReached(true);
         return;
       }
 
@@ -117,6 +144,7 @@ const RegistrationForm = () => {
         setIsSubmitting(false);
         return;
       }
+
       if (rollNoExists) {
         toast.error('This roll number is already registered.');
         setFormData({
@@ -180,6 +208,7 @@ const RegistrationForm = () => {
           value={formData.fullName}
           onChange={handleChange}
           required
+          disabled={limitReached} 
         />
         <input
           type="text"
@@ -189,6 +218,7 @@ const RegistrationForm = () => {
           value={formData.rollNumber}
           onChange={handleChange}
           required
+          disabled={limitReached} 
         />
         <input
           type="email"
@@ -198,10 +228,15 @@ const RegistrationForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
+          disabled={limitReached} 
         />
-        <button type="submit" className="submit-button" disabled={isSubmitting}>
+        <button type="submit" className="submit-button" disabled={isSubmitting || limitReached}>
           {isSubmitting ? 'Submitting...' : 'Register'}
         </button>
+
+        {limitReached && (
+          <p className="limit-reached">Registration limit has been reached. No more seats available.</p>
+        )}
       </form>
     </div>
   );
