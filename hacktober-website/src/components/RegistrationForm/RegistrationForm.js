@@ -12,7 +12,8 @@ const RegistrationForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [limitReached, setLimitReached] = useState(false);
-  const [registrationLimit, setRegistrationLimit] = useState(174); 
+  //const [registrationLimit, setRegistrationLimit] = useState(174); 
+  const registrationLimit = 174;
 
   const sheetBestEndpoint = 'https://api.sheetbest.com/sheets/afbe7454-7092-4512-8fbc-e7767a248f55';
 
