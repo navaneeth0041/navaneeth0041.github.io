@@ -1,6 +1,5 @@
 {
-  "homepage": "https://navaneeth0041.github.io/HacktoberFest-Website",
-  "name": "hacktober-website",
+  "homepage": "https://navaneeth0041.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
