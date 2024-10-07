@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/HacktoberFest-Website/static/css/main.ec742fb1.css",
-    "main.js": "/HacktoberFest-Website/static/js/main.040e634d.js",
-    "static/js/453.678d12f7.chunk.js": "/HacktoberFest-Website/static/js/453.678d12f7.chunk.js",
-    "index.html": "/HacktoberFest-Website/index.html",
-    "main.ec742fb1.css.map": "/HacktoberFest-Website/static/css/main.ec742fb1.css.map",
-    "main.040e634d.js.map": "/HacktoberFest-Website/static/js/main.040e634d.js.map",
-    "453.678d12f7.chunk.js.map": "/HacktoberFest-Website/static/js/453.678d12f7.chunk.js.map"
+    "main.css": "/static/css/main.ec742fb1.css",
+    "main.js": "/static/js/main.c4346a87.js",
+    "static/js/453.69f3745b.chunk.js": "/static/js/453.69f3745b.chunk.js",
+    "index.html": "/index.html",
+    "main.ec742fb1.css.map": "/static/css/main.ec742fb1.css.map",
+    "main.c4346a87.js.map": "/static/js/main.c4346a87.js.map",
+    "453.69f3745b.chunk.js.map": "/static/js/453.69f3745b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec742fb1.css",
-    "static/js/main.040e634d.js"
+    "static/js/main.c4346a87.js"
   ]
 }
