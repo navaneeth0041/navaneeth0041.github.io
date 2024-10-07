@@ -20,16 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd hacktober-website
           npm install
 
       - name: Build React app
         run: |
-          cd hacktober-website
           npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hacktober-website/build
+          publish_dir: ./build
