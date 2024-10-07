@@ -10,7 +10,7 @@
     position: relative;
     background: #1C1C1C;
     background: linear-gradient(0deg, #1C1C1C, #193319);
-    min-height: 100vh;
+    padding-bottom: 40px;
 }
 
 .header-top {

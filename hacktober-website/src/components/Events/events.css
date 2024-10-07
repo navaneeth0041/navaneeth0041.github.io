@@ -1,0 +1,249 @@
+.event-card {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    animation: fadeIn 1/5s ease-in-out;
+  }
+  
+  .virtual-label {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 2vw;
+    margin-bottom: 10px;
+    animation: bounceIn 1s ease-out;
+  }
+  .event-title-description {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    animation: slideIn 1.5s ease-in-out;
+
+  }
+  .event-title {
+    font-size: 3.2vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: typing 1.5s ease-in-out infinite alternate;
+  }
+  
+  .event-description {
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.8s ease-in;
+
+  }
+  
+  .event-details p {
+    font-size: 1.5vw;
+    margin: 5px 0;
+  }
+  
+
+  
+
+  .featured-events {
+    padding-left: 80px;
+    padding-inline: 50px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 70vw;
+  }
+
+.header-events {
+    text-align: left;
+    padding: 1.5vw;
+    border: 2px dashed #ffffff;
+    border-radius: 12px;
+    color: #d8d825; 
+    font-family: Arial, sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 1024px) {
+    .event-title-description {
+      flex-direction: column;
+      gap: 2vw;
+    }
+    
+    .virtual-label {
+      font-size: 4vw;
+    }
+  
+    .event-title {
+      font-size: 6vw;
+    }
+  
+    .event-description {
+      font-size: 3vw;
+    }
+  
+    .event-details p {
+      font-size: 2.5vw;
+    }
+  
+    .header-events {
+      font-size: 4vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .event-title-description {
+      flex-direction: column;
+      border-radius: 8px;
+      width: 100%;
+    }
+  
+    .virtual-label {
+      font-size: 6vw;
+    }
+  
+    .event-title {
+      font-size: 8vw;
+    }
+  
+    .event-description {
+      font-size: 4vw;
+    }
+  
+    .event-details p {
+      font-size: 3.5vw;
+    }
+  
+    .header-events {
+      font-size: 5vw; 
+    }
+  
+    .featured-events {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+  .featured-events {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  }
+
+  @keyframes borderGlow {
+    0% {
+      box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #c0d8e2;
+      border-color: #ffffff;
+    }
+    50% {
+      box-shadow: 0 0 10px #ddd6dd, 0 0 20px #d6ecf5, 0 0 30px #b2beb2;
+      border-color: #f3e5f3;
+    }
+    100% {
+      box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #b1cfdb;
+      border-color: #ffffff;
+    }
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes textGlow {
+    0% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #00b7ff, 0 0 15px #00b7ff;
+    }
+    100% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #00b7ff, 0 0 30px #00b7ff;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes linkHover {
+    0%, 100% {
+      color: #00b7ff;
+    }
+    50% {
+      color: #ff0000;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }  
