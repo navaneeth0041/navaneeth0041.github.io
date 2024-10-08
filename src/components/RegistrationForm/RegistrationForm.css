@@ -105,12 +105,71 @@
   text-align: left;
 }
 
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.gender-field {
+  border-radius: 10px;
+  font-family: inherit;
+  color: var(--input-placeholder-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.gender-label {
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+.gender-select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--input-border-color);
+  border-radius: 10px;
+  background-color: var(--input-bg-color);
+  color: var(--input-placeholder-color);
+  font-size: 1rem;
+  outline: none;
+  appearance: none; 
+  /* background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7H0z%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E"); */
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10px 7px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.gender-select:focus {
+  border-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.gender-select:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+  border: 1px solid #d0d0d0;
+}
+option{
+  background-color: #000000;
+  color: white;
+}
+
 @media (max-width: 600px) {
   .form-container {
     width: 80%;
     padding: 60px 100px;
     margin-top: 30px;
-
   }
 
   .form-title {
@@ -133,8 +192,12 @@
   }
 
   .note {
-    font-size: .75rem;
+    font-size: 0.75rem;
     text-align: left;
+  }
+
+  .form-row {
+    flex-direction: column;
   }
 }
 
@@ -142,7 +205,6 @@
   .form-container {
     padding: 60px 80px;
     margin-top: 0px;
-
   }
 
   .form-title {
@@ -164,6 +226,10 @@
 
   .note {
     font-size: 1rem;
+  }
+
+  .gender-select {
+    font-size: 1.125rem;
   }
 }
 
@@ -194,6 +260,10 @@
   .note {
     font-size: 1rem;
   }
+
+  .gender-select {
+    font-size: 1.25rem;
+  }
 }
 
 .limit-reached {
@@ -204,19 +274,16 @@
   font-weight: bold;
 }
 
-
 .form-input:disabled {
-  background-color: #e0e0e0;  /* Lighter background for disabled input */
-  color: #a0a0a0;  /* Dimmed text color */
-  cursor: not-allowed;  /* Show not-allowed cursor */
-  border: 1px solid #d0d0d0; /* Change border color */
+  background-color: #e0e0e0;  
+  color: #a0a0a0;  
+  cursor: not-allowed; 
+  border: 1px solid #d0d0d0; 
 }
 
-/* Style for disabled submit button */
 .submit-button:disabled {
-  background-color: #d3d3d3;  /* Light grey background */
-  color: #a0a0a0;  /* Dimmed text */
-  cursor: not-allowed;  /* Show not-allowed cursor */
-  border: 1px solid #b0b0b0; /* Change border color */
+  background-color: #d3d3d3; 
+  color: #a0a0a0;  
+  cursor: not-allowed; 
+  border: 1px solid #b0b0b0;
 }
-

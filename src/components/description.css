@@ -92,6 +92,9 @@
     color: var(--Theme-Primary, #50DA4C);
     text-align: justify;
 }
+sup{
+    text-transform: lowercase;
+}
 
 
 .date {

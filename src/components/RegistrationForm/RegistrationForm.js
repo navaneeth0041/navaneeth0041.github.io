@@ -8,17 +8,17 @@ const RegistrationForm = () => {
     fullName: '',
     rollNumber: '',
     email: '',
+    gender: '', 
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [limitReached, setLimitReached] = useState(false);
-  //const [registrationLimit, setRegistrationLimit] = useState(174); 
   const registrationLimit = 174;
 
   const sheetBestEndpoint = 'https://api.sheetbest.com/sheets/afbe7454-7092-4512-8fbc-e7767a248f55';
 
   const [submittedEmails, setSubmittedEmails] = useState([]);
-  const [submittedrollNums, setSubmittedrollNums] = useState([]);
+  const [submittedRollNums, setSubmittedRollNums] = useState([]);
 
   useEffect(() => {
     const checkLimit = async () => {
@@ -54,8 +54,8 @@ const RegistrationForm = () => {
   };
 
   const validateForm = () => {
-    const { fullName, rollNumber, email } = formData;
-    if (!fullName || !rollNumber || !email) {
+    const { fullName, rollNumber, email, gender } = formData;
+    if (!fullName || !rollNumber || !email || !gender) { // Include gender
       toast.error('Please fill out all fields.');
       return false;
     }
@@ -87,15 +87,17 @@ const RegistrationForm = () => {
         fullName: '',
         rollNumber: '',
         email: '',
+        gender: '',
       });
       return;
     }
-    if (submittedEmails.includes(rollLower)) {
+    if (submittedRollNums.includes(rollLower)) { // Corrected to check submittedRollNums
       toast.error('This roll number has already been submitted in this session.');
       setFormData({
         fullName: '',
         rollNumber: '',
         email: '',
+        gender: '',
       });
       return;
     }
@@ -121,6 +123,7 @@ const RegistrationForm = () => {
           fullName: '',
           rollNumber: '',
           email: '',
+          gender: '',
         });
         setIsSubmitting(false);
         setLimitReached(true);
@@ -141,6 +144,7 @@ const RegistrationForm = () => {
           fullName: '',
           rollNumber: '',
           email: '',
+          gender: '',
         });
         setIsSubmitting(false);
         return;
@@ -152,6 +156,7 @@ const RegistrationForm = () => {
           fullName: '',
           rollNumber: '',
           email: '',
+          gender: '',
         });
         setIsSubmitting(false);
         return;
@@ -166,6 +171,7 @@ const RegistrationForm = () => {
           'Full Name': formData.fullName,
           'Roll Number': formData.rollNumber,
           'Email Address': formData.email,
+          'Gender': formData.gender,
           'Timestamp': new Date().toISOString(),
         }),
       });
@@ -176,9 +182,10 @@ const RegistrationForm = () => {
           fullName: '',
           rollNumber: '',
           email: '',
+          gender: '',
         });
         setSubmittedEmails([...submittedEmails, emailLower]);
-        setSubmittedrollNums([...submittedrollNums, rollLower]);
+        setSubmittedRollNums([...submittedRollNums, rollLower]); // Corrected variable
       } else {
         const errorData = await postResponse.json();
         toast.error(`Error: ${errorData.error || 'Something went wrong.'}`);
@@ -209,18 +216,38 @@ const RegistrationForm = () => {
           value={formData.fullName}
           onChange={handleChange}
           required
-          disabled={limitReached} 
+          disabled={limitReached}
         />
-        <input
-          type="text"
-          name="rollNumber"
-          placeholder="Roll Number"
-          className="form-input"
-          value={formData.rollNumber}
-          onChange={handleChange}
-          required
-          disabled={limitReached} 
-        />
+        
+        <div className="form-row">
+          <input
+            type="text"
+            name="rollNumber"
+            placeholder="Roll Number"
+            className="form-input half-width"
+            value={formData.rollNumber}
+            onChange={handleChange}
+            required
+            disabled={limitReached}
+          />
+          
+          <div className="gender-field half-width">
+            <select
+              name="gender"
+              id="gender"
+              className="gender-select"
+              value={formData.gender}
+              onChange={handleChange}
+              required
+              disabled={limitReached}
+            >
+              <option value="" disabled>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+        </div>
+
         <input
           type="email"
           name="email"
@@ -229,7 +256,7 @@ const RegistrationForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          disabled={limitReached} 
+          disabled={limitReached}
         />
         <button type="submit" className="submit-button" disabled={isSubmitting || limitReached}>
           {isSubmitting ? 'Submitting...' : 'Register'}

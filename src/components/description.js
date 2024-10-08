@@ -11,7 +11,7 @@ function Description() {
         <div className="square"></div>
       </div>
       <div className="text-container">
-        <h1 className="date">21 & 22 OCTOBER</h1>
+        <h1 className="date">19<sup>th</sup> OCTOBER</h1>
         <p className="paragraph">
           <strong>Hacktoberfest</strong> is an annual event hosted by
           <a href="https://www.digitalocean.com/" target="_blank" rel="noopener noreferrer"> DigitalOcean</a> and
