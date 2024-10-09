@@ -17,7 +17,7 @@
   background: linear-gradient(180deg, #1C1C1C, #2C592C);
 }
 
-  
+
 .footer h3 {
   color: var(--Theme-Text, #FEFDF8);
   text-shadow: 0px 8px 4px rgba(255, 139, 255, 0.25);
@@ -37,25 +37,53 @@
   line-height: normal;
 }
 
-.foot-icon{
+.foot-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-  
-  .foot-icon img {
-    width: 3vw; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
-  
+}
+
+.foot-icon img {
+  width: 3vw;
+  /* Responsive width */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
 .foot-icon a {
   text-decoration: none;
 }
 
 .foss-logo img {
-  width: 32vw;
+  width: 50vw;
   margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .foot-icon img {
+    width: 30px;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 0 10px;
+    cursor: pointer;
+
+  }
+
+}
+
+@media (min-width: 480px) {
+  .foot-icon img {
+    width: 40px;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 0 10px;
+    cursor: pointer;
+
+  }
+
 }
