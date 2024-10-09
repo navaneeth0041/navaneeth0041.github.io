@@ -15,7 +15,7 @@ const RegistrationForm = () => {
   const [limitReached, setLimitReached] = useState(false);
   const registrationLimit = 174;
 
-  const sheetBestEndpoint = 'https://api.sheetbest.com/sheets/afbe7454-7092-4512-8fbc-e7767a248f55';
+  const sheetBestEndpoint = 'https://api.sheetbest.com/sheets/d77801e8-e78d-423d-85df-04e05caac0a8';
 
   const [submittedEmails, setSubmittedEmails] = useState([]);
   const [submittedRollNums, setSubmittedRollNums] = useState([]);
@@ -55,7 +55,7 @@ const RegistrationForm = () => {
 
   const validateForm = () => {
     const { fullName, rollNumber, email, gender } = formData;
-    if (!fullName || !rollNumber || !email || !gender) { // Include gender
+    if (!fullName || !rollNumber || !email || !gender) { 
       toast.error('Please fill out all fields.');
       return false;
     }
@@ -91,7 +91,7 @@ const RegistrationForm = () => {
       });
       return;
     }
-    if (submittedRollNums.includes(rollLower)) { // Corrected to check submittedRollNums
+    if (submittedRollNums.includes(rollLower)) { 
       toast.error('This roll number has already been submitted in this session.');
       setFormData({
         fullName: '',
@@ -185,7 +185,7 @@ const RegistrationForm = () => {
           gender: '',
         });
         setSubmittedEmails([...submittedEmails, emailLower]);
-        setSubmittedRollNums([...submittedRollNums, rollLower]); // Corrected variable
+        setSubmittedRollNums([...submittedRollNums, rollLower]); 
       } else {
         const errorData = await postResponse.json();
         toast.error(`Error: ${errorData.error || 'Something went wrong.'}`);
