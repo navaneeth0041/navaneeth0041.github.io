@@ -251,7 +251,7 @@ const RegistrationForm = () => {
         <input
           type="email"
           name="email"
-          placeholder="Email Address"
+          placeholder="Personal Email Address"
           className="form-input"
           value={formData.email}
           onChange={handleChange}
