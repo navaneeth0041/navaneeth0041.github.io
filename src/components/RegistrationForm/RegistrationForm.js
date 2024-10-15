@@ -206,7 +206,10 @@ const RegistrationForm = () => {
         Sign up for free by filling out the form below, and hurry—seats are limited!
         Don’t forget to bring your friends along too!
       </p>
-      <p className="note">*Note: Only for Amritapuri campus students.</p>
+      <p className="note">
+  <span className="info-icon">i</span> Exclusively for freshers.
+</p>
+
       <form className="registration-form" onSubmit={handleSubmit}>
         <input
           type="text"
