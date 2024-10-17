@@ -15,7 +15,7 @@ const RegistrationForm = () => {
   const [limitReached, setLimitReached] = useState(false);
   const registrationLimit = 299;
 
-  const sheetBestEndpoint = process.env.REACT_APP_SHEETBEST_ENDPOINT;
+  const sheetBestEndpoint = "https://api.sheetbest.com/sheets/d77801e8-e78d-423d-85df-04e05caac0a8";
 
 
   const [submittedEmails, setSubmittedEmails] = useState([]);
@@ -29,6 +29,7 @@ const RegistrationForm = () => {
           headers: {
             'Content-Type': 'application/json',
           },
+          
         });
 
         if (!getResponse.ok) {
