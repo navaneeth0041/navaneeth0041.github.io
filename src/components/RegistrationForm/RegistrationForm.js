@@ -15,7 +15,8 @@ const RegistrationForm = () => {
   const [limitReached, setLimitReached] = useState(false);
   const registrationLimit = 299;
 
-  const sheetBestEndpoint = 'https://api.sheetbest.com/sheets/d77801e8-e78d-423d-85df-04e05caac0a8';
+  const sheetBestEndpoint = process.env.REACT_APP_SHEETBEST_ENDPOINT;
+
 
   const [submittedEmails, setSubmittedEmails] = useState([]);
   const [submittedRollNums, setSubmittedRollNums] = useState([]);

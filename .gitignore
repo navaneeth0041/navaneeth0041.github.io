@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+﻿# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -26,4 +26,6 @@ yarn.lock binary
 
 package-lock.json binary
 yarn.lock binary
+
+.env
 
